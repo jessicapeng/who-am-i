@@ -4,7 +4,6 @@ Hi! This is my personal portfolio website--all about me, my work, and the cool t
 
 I'm an **AI Software Engineer at Goldman Sachs** and a **Columbia University CS grad**, working at the intersection of artificial intelligence and investment banking.
 
-T
 ## Find me
 
 - GitHub: [github.com/jessicapeng](https://github.com/jessicapeng)
