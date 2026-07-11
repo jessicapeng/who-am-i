@@ -37,7 +37,6 @@ const experiences = [
     date: '2021',
     company: 'Computer-Enabled Abilities Laboratory',
     role: 'Software Developer · Columbia University',
-    badge: 'Research & Development',
   },
   {
     date: '2019 - 2020',
