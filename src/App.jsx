@@ -19,9 +19,9 @@ const experiences = [
     date: '2022 - 2025',
     company: 'Goldman Sachs',
     role: 'Software Engineer (Associate) · Software Engineer (Analyst)',
-    badge: 'Investment Banking Engineering · AI Applications · Marcus',
+    badge: 'Investment Banking Engineering · AI · Marcus',
     awards: [
-      "Chair of Goldman's Junior Engineering Committee",
+      "Chair of Goldman's Junior Engineering Committee (NIC)",
     ],
     featured: true,
   },
@@ -71,6 +71,8 @@ const experiences = [
 const involvements = [
   {
     title: 'Fireside Chat with Marco Argenti',
+    linkedText: 'Marco Argenti',
+    href: 'https://www.linkedin.com/in/marcoargenti/',
     org: 'Goldman Sachs',
     year: '2026',
     role: 'Moderator',
@@ -79,10 +81,30 @@ const involvements = [
     image: 'https://picsum.photos/seed/fireside/240/180',
   },
   {
-    title: 'Decoding the Business: Understanding Global Banking Markets, Asset Wealth Management, and Platform Solutions',
+    title: 'Community Dance Workshop Fundraising',
+    org: 'Goldman Sachs',
+    year: '2023',
+    role: 'Teacher',
+    description:
+      "Hosted a fireside chat with Goldman Sachs' Chief Information Officer on AI, engineering culture, and career growth.",
+    image: 'https://picsum.photos/seed/fireside/240/180',
+  },
+  {
+    title: 'Lunar Accel 2026 Spring Acclerator',
+    linkedText: 'Lunar Acce',
+    href: 'https://www.lunaraccel.org/programs/career-accelerator',
+    org: 'Lunar Accel',
+    year: '2026',
+    role: 'Organizer',
+    description:
+      "Hosted a fireside chat with Goldman Sachs' Chief Information Officer on AI, engineering culture, and career growth.",
+    image: 'https://picsum.photos/seed/fireside/240/180',
+  },
+  {
+    title: 'Decoding the Business: Global Banking & Markets, Asset Wealth Management, and Platform Solutions',
     org: 'Goldman Sachs',
     year: '2026',
-    role: 'Speaker',
+    role: 'Host',
     description:
       "Gave a firm-wide talk breaking down Goldman's three business lines and how engineering powers each of them.",
     image: 'https://picsum.photos/seed/decoding/240/180',
@@ -90,56 +112,20 @@ const involvements = [
   {
     title: 'GS Alumni in the Startup World',
     org: 'Goldman Sachs',
-    year: '2026',
-    role: 'Host',
+    year: '2025',
+    role: 'Moderator',
     description:
       'Hosted a conversation with Goldman alumni who founded and joined startups, on making the leap from finance to founding.',
     image: 'https://picsum.photos/seed/alumni/240/180',
   },
   {
-    title: 'Building User Interfaces for AI Applications',
+    title: 'Skills Harness and Prompt Engineering',
     org: 'Goldman Sachs',
-    year: '2025',
-    role: 'Speaker',
-    description:
-      'Talk on designing and building user interfaces for AI products, from streaming responses to human-in-the-loop patterns.',
-    image: 'https://picsum.photos/seed/buildui/240/180',
-  },
-  {
-    title: 'Prompt Engineering',
-    org: 'Goldman Sachs',
-    year: '2025',
-    role: 'Speaker',
+    year: '2026',
+    role: 'Presenter',
     description:
       'Hands-on session for engineers on prompt engineering techniques for LLM applications in production.',
     image: 'https://picsum.photos/seed/prompt/240/180',
-  },
-  {
-    title: 'NIC Mentorship Panel',
-    org: 'Goldman Sachs',
-    year: '2025',
-    role: 'Panelist',
-    description:
-      'Spoke on a panel about mentorship — finding mentors, being one, and growing as a junior engineer at the firm.',
-    image: 'https://picsum.photos/seed/mentorship/240/180',
-  },
-  {
-    title: 'NIC Global Leadership Forum',
-    org: 'Goldman Sachs',
-    year: '2026',
-    role: 'Organizer',
-    description:
-      'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
-    image: 'https://picsum.photos/seed/showcase/240/180',
-  },
-  {
-    title: 'NIC Networking Panel',
-    org: 'Goldman Sachs',
-    year: '2025',
-    role: 'Panelist',
-    description:
-      'Panel discussion on building a network across divisions and making the most of the analyst community.',
-    image: 'https://picsum.photos/seed/networking/240/180',
   },
   {
     title: 'NIC AI Hackathon',
@@ -150,14 +136,51 @@ const involvements = [
       'Helped organize an AI hackathon for engineers across the firm to prototype Gen AI applications.',
     image: 'https://picsum.photos/seed/hackathon/240/180',
   },
+
   {
-    title: 'NIC Year End Showcase',
+    title: 'Global Engineering Townhall',
     org: 'Goldman Sachs',
-    year: '2026',
+    year: '2025',
+    role: 'Feature',
+    description:
+      'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
+    image: 'https://picsum.photos/seed/showcase/240/180',
+  },
+  {
+    title: 'Building User Interfaces for AI Applications',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Presenter',
+    description:
+      'Talk on designing and building user interfaces for AI products, from streaming responses to human-in-the-loop patterns.',
+    image: 'https://picsum.photos/seed/buildui/240/180',
+  },
+  {
+    title: 'NIC Global Leadership Forum',
+    org: 'Goldman Sachs',
+    year: '2025',
     role: 'Organizer',
     description:
       'Organized the end-of-year showcase celebrating projects and community initiatives from across the committee.',
     image: 'https://picsum.photos/seed/showcase/240/180',
+  },
+  {
+    title: 'NIC Career Progression Panel',
+    org: 'Goldman Sachs',
+    year: '2025',
+    role: 'Panelist',
+    description:
+      'Panel discussion on building a network across divisions and making the most of the analyst community.',
+    image: 'https://picsum.photos/seed/networking/240/180',
+  },
+   {
+    title: 'Goldman x Columbia Alumni Panel',
+    org: 'Goldman Sachs',
+    year: '2024',
+    role: 'Panelist',
+    description:
+      'Panel discussion on building a network across divisions and making the most of the analyst community.',
+    image: 'https://picsum.photos/seed/networking/240/180',
   },
 ];
 
@@ -168,7 +191,7 @@ const education = [
     degree: 'B.S. in Computer Science · New York, NY',
     highlights: ['Dean\'s List', 'GPA: 3.9'],
     pillsLabel: 'Classes:',
-    pills: ['AI', 'NLP', 'Computer Vision', 'C/C++', 'SaaS'],
+    pills: ['AI', 'NLP', 'Computer Vision', 'Databases', 'Data Structures', 'C/C++', 'SaaS'],
     primary: true,
   },
   {
@@ -257,6 +280,22 @@ const projects = [
   },
 ];
 
+function EventTitle({ event }) {
+  if (!event.href || !event.linkedText) {
+    return event.title;
+  }
+
+  const [beforeLink, afterLink] = event.title.split(event.linkedText);
+
+  return (
+    <>
+      {beforeLink}
+      <a href={event.href} target="_blank" rel="noreferrer">{event.linkedText}</a>
+      {afterLink}
+    </>
+  );
+}
+
 function SectionHeader({ tag, title }) {
   return (
     <div className="section-header">
@@ -280,7 +319,7 @@ function Hero() {
             <strong>AI Full-Stack Software Engineer</strong>
           </p>
           <p className="hero-description">
-             Developing Gen AI applications within Investment Banking at Goldman Sachs. ​
+             Developing Gen AI applications within Investment Banking at Goldman Sachs
           </p>
           {!ONE_PAGER && (
             <div className="hero-tags">
@@ -321,6 +360,7 @@ function Hero() {
           </div>
         </div>
         <Experience />
+        <EventsPanel />
       </div>
     </div>
   );
@@ -379,6 +419,33 @@ function Experience() {
   );
 }
 
+function EventsPanel() {
+  const orderedEvents = [...involvements].sort(
+    (first, second) => Number(second.year) - Number(first.year),
+  );
+
+  return (
+    <aside className="events-panel" aria-labelledby="events-panel-title">
+      <div className="events-panel-heading">
+        <span className="section-tag">Events</span>
+        <span className="events-panel-count">{orderedEvents.length}</span>
+      </div>
+
+      <div className="events-panel-list">
+        {orderedEvents.map((event) => (
+          <article className="events-panel-item" key={event.title}>
+            <div className="events-panel-meta">
+              <span>{event.year}</span>
+              <span className="events-panel-role">{event.role}</span>
+            </div>
+            <h3><EventTitle event={event} /></h3>
+          </article>
+        ))}
+      </div>
+    </aside>
+  );
+}
+
 function Involvement() {
   return (
     <div id="section-involvement">
@@ -390,7 +457,7 @@ function Involvement() {
               <img src={event.image} alt={event.title} className="involvement-img" />
               <div className="involvement-body">
                 <div className="involvement-row-title">
-                  {event.title}
+                  <EventTitle event={event} />
                   <span className="involvement-role">{event.role}</span>
                 </div>
                 <div className="involvement-meta">
