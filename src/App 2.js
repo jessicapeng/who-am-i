@@ -4,8 +4,6 @@ const profileImage =
   'https://static.wixstatic.com/media/2296b6_34c632e1db4c433c8a77a2075cb92964~mv2.png/v1/crop/x_0,y_33,w_1182,h_1297/fill/w_406,h_446,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/profile%20professional.png';
 
 const SHOW_INVOLVEMENT = false; 
-// Toggle a simplified "one pager" view that removes small pill UI elements
-const ONE_PAGER = true;
 
 const stats = [
   ['4+', 'Years at Goldman Sachs'],
@@ -166,9 +164,7 @@ const education = [
     year: '2018 - 2022',
     school: 'Columbia University',
     degree: 'B.S. in Computer Science · New York, NY',
-    highlights: ['Dean\'s List', 'GPA: 3.9'],
-    pillsLabel: 'Classes:',
-    pills: ['AI', 'NLP', 'Computer Vision', 'C/C++', 'SaaS'],
+    pills: ['Dean\'s List', "GPA: 3.9", 'AI', 'NLP', 'Computer Vision', 'Databases'],
     primary: true,
   },
   {
@@ -218,39 +214,39 @@ const skillGroups = [
 
 const projects = [
   {
-    title: 'IBM RESP First Responder App',
+    title: 'RESP First Responder App',
     href: 'https://github.com/msradam/resp-api',
     description:
       'Application for 1st responders to reconnect disaster victims with family members and administer psychological first aid.',
-    tag: 'IBM · Angel Hacks · Humanitarian Tech',
+    tag: 'Full-Stack · Humanitarian Tech',
   },
   {
-    title: '3D Phantom for Cancer Biopsy',
+    title: 'Engineering 3D Phantom',
     description:
       'Patient-specific 3D phantom to validate robotic-guided needle-insertion prostate cancer biopsy through MRI using AI segmentation.',
-    tag: 'Harvard Medical School',
+    tag: 'Medical AI · Robotics',
   },
   {
-    title: 'Inertial Knee Brace for ACL Tear Prevention',
+    title: 'ACL Inertial Knee Brace',
     description:
       'Integrated Mbientlab inertial sensors into a knee brace to collect movement data and prevent ACL tears in athletes.',
     tag: 'IoT · Wearables · Sports Tech',
   },
   {
-    title: 'Computer Vision Research',
+    title: 'Political Visual Literacy',
     description:
-      'Built TensorFlow ML pipelines using Faster RCNN and Google Object Detection to identify extremist group symbols.',
-    tag: 'Columbia University',
+      'TensorFlow ML pipelines using Faster RCNN and Google Object Detection to identify extremist group symbols.',
+    tag: 'Computer Vision · TensorFlow',
   },
   {
-    title: 'Art of Engineering',
+    title: 'Space Jam',
     href: 'https://www.youtube.com/watch?v=z3NT4RAedZU',
     description:
       'Backboard shooter game using SolidWorks, Arduino, IR beams, laser cutting, and 3D printing for Art of Engineering.',
     tag: 'Hardware · Arduino · CAD',
   },
   {
-    title: 'Virus Simulation',
+    title: 'Cell Virus Simulation',
     description:
       'Simulation of a controlled epidemic in NYC with calculated probabilities for infection, resistance, recovery, and transmission.',
     tag: 'Simulation · Epidemiology',
@@ -269,32 +265,39 @@ function SectionHeader({ tag, title }) {
 
 function Hero() {
   return (
-    <div id="redesign-hero">
+    <section id="redesign-hero">
       <div className="hero-grid">
         <div className="hero-left">
-          {!ONE_PAGER && <div className="hero-badge">AI Engineer · Fintech</div>}
+          <div className="hero-badge">AI Engineer · Fintech</div>
           <h1 className="hero-name">
             Jessica Peng
           </h1>
           <p className="hero-title">
-            <strong>AI Full-Stack Software Engineer</strong>
+            <strong>AI Software Engineer</strong> at Goldman Sachs
           </p>
           <p className="hero-description">
-             Developing Gen AI applications within Investment Banking at Goldman Sachs. ​
+             Columbia University CS graduate developing Gen AI applications within Investment Banking at Goldman Sachs. ​
           </p>
-          {!ONE_PAGER && (
-            <div className="hero-tags">
-              <span className="hero-tag">Machine Learning</span>
-              <span className="hero-tag">NLP</span>
-              <span className="hero-tag">Computer Vision</span>
-              <span className="hero-tag">Multi-Agent</span>
-              <span className="hero-tag">RAG</span>
-              <span className="hero-tag">Financial Engineering</span>
-              <span className="hero-tag">Investment Banking</span>
-              <span className="hero-tag">Gen AI</span>
-            </div>
-          )}
+          {/* <div className="hero-tags">
+            <span className="hero-tag">Machine Learning</span>
+            <span className="hero-tag">NLP</span>
+            <span className="hero-tag">Computer Vision</span>
+            <span className="hero-tag">Multi-Agent</span>
+            <span className="hero-tag">RAG</span>
+            <span className="hero-tag">Financial Engineering</span>
+            <span className="hero-tag">Investment Banking</span>
+            <span className="hero-tag">Gen AI</span>
+          </div> */}
+          <div className="hero-cta">
+            <a href="mailto:jessica9peng@gmail.com" className="btn-primary">
+              Get In Touch
+            </a>
+            <a href="https://github.com/jessicapeng" className="btn-secondary" target="_blank" rel="noreferrer">
+              GitHub →
+            </a>
+          </div>
         </div>
+
         <div className="hero-card">
           <img src={profileImage} className="hero-card-photo" alt="Jessica Peng" />
           <div className="hero-card-name">Jessica Peng</div>
@@ -320,9 +323,8 @@ function Hero() {
             </InfoItem>
           </div>
         </div>
-        <Experience />
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -350,7 +352,8 @@ function Stats() {
 
 function Experience() {
   return (
-      <section id="section-experience" className="section section-narrow">
+    <div id="section-experience">
+      <section className="section section-narrow">
         <SectionHeader tag="Career"  />
         <div className="timeline">
           {experiences.map((item) => (
@@ -376,6 +379,7 @@ function Experience() {
           ))}
         </div>
       </section>
+    </div>
   );
 }
 
@@ -417,15 +421,7 @@ function Education() {
               <div className="edu-year">{item.year}</div>
               <div className="edu-school">{item.school}</div>
               <div className="edu-degree">{item.degree}</div>
-              {item.highlights && (
-                <div className="edu-meta edu-highlights">
-                  {item.highlights.map((highlight) => (
-                    <span className="edu-pill gold" key={highlight}>{highlight}</span>
-                  ))}
-                </div>
-              )}
               <div className="edu-meta">
-                {item.pillsLabel && <span className="edu-pills-label">{item.pillsLabel}</span>}
                 {item.pills.map((pill) => (
                   <span className={`edu-pill${pill.includes('Dean') || pill === 'Valedictorian' ? ' gold' : ''}`} key={pill}>
                     {pill}
@@ -530,11 +526,12 @@ function App() {
       <main>
         <Hero />
         {/* <Stats /> */}
+        <Experience />
         {SHOW_INVOLVEMENT && <Involvement />}
         <Education />
         <Skills />
         <Projects />
-        {/* <Contact /> */}
+        <Contact />
       </main>
     </div>
   );
