@@ -84,7 +84,7 @@ const involvements = [
     title: 'PYJ NYC Community Dance Workshop',
     org: 'Goldman Sachs',
     year: '2024',
-    linkedText: "PYJ NYC Community Dance Workshop",
+    linkedText: "Dance Workshop",
     href: "https://drive.google.com/drive/folders/14aYOmBQxiEkuki4NQeSHHFDUmLY3P477?usp=drive_link",
     role: 'Teacher',
     description:
